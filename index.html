@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScreenShield: blur sensitive info before you share your screen</title>
+<meta name="description" content="Chrome extension that blurs emails, phone numbers, card numbers and API keys before you share your screen in Meet, Zoom or Teams. Free, with Pro auto-detection.">
+<link rel="canonical" href="https://sky-blue1111.github.io/screenshield-site/">
+<link rel="icon" href="/screenshield-site/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/screenshield-site/assets/img/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/screenshield-site/assets/img/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ScreenShield">
+<meta property="og:title" content="ScreenShield: share your screen, not your secrets">
+<meta property="og:description" content="Blur emails, phone numbers, card numbers and API keys before anyone on the call can read them.">
+<meta property="og:url" content="https://sky-blue1111.github.io/screenshield-site/">
+<meta property="og:image" content="https://sky-blue1111.github.io/screenshield-site/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#16151f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6fb" media="(prefers-color-scheme: light)">
+<link rel="preload" href="/screenshield-site/assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/screenshield-site/assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ScreenShield",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome",
+  "description": "Blurs emails, phone numbers, card numbers and API keys on web pages before you share your screen.",
+  "url": "https://sky-blue1111.github.io/screenshield-site/",
+  "downloadUrl": "https://chromewebstore.google.com/detail/lnnmacapfomfnfnmejcofohhimoebafk",
+  "offers": [
+    { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Pro monthly", "price": "4.99", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Pro yearly", "price": "29.99", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Pro lifetime", "price": "49.00", "priceCurrency": "USD" }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="/screenshield-site/"><img src="/screenshield-site/assets/img/logo.svg" alt="" width="30" height="30">ScreenShield</a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="hide-sm" href="#finds">What it finds</a>
+      <a class="hide-sm" href="#pricing">Pricing</a>
+      <a class="hide-xs" href="/screenshield-site/help/">Help</a>
+      <a class="btn small" data-store="header" href="https://chromewebstore.google.com/detail/lnnmacapfomfnfnmejcofohhimoebafk">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Share your screen, not your secrets.</h1>
+      <p class="lede">ScreenShield blurs emails, phone numbers, card numbers and API keys right inside the page, before anyone on your call, in your recording or watching your stream can read them.</p>
+      <div class="cta">
+        <a class="btn" data-store="hero" href="https://chromewebstore.google.com/detail/lnnmacapfomfnfnmejcofohhimoebafk">Add to Chrome, it's free</a>
+        <a href="#presentation">See how Presentation Mode works</a>
+      </div>
+      <p class="fine">Free plan with no limits and no account. Pro from $4.99 a month, with a 7-day free trial.</p>
+    </div>
+
+    <figure class="stage" aria-label="Live demo: a CRM page with made-up data. When ScreenShield is on, emails, phone numbers, card details and keys are blurred.">
+      <div class="screen" data-demo-screen>
+        <div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.northwind.io/contacts</span></div>
+        <div class="sharing"><span class="dot"></span>Sharing<span class="xs-hide">&nbsp;this tab</span><span class="state"><span class="off">Not protected</span><span class="on">Protected<span class="xs-hide">&nbsp;by ScreenShield</span></span></span></div>
+        <div class="crm-nav"><b>Northwind CRM</b><span class="tabs">Contacts</span><span class="tabs">Deals</span><span class="me s">dana.whitfield@northwind.io</span></div>
+        <div class="crm-body">
+          <div class="kpis">
+            <div class="kpi"><small>Total revenue</small><strong>$2,847,392</strong></div>
+            <div class="kpi"><small>Open deals</small><strong>142</strong></div>
+            <div class="kpi"><small>Win rate</small><strong>34.2%</strong></div>
+          </div>
+          <table class="crm-table">
+            <colgroup><col class="c-name"><col class="c-email"><col class="c-phone"><col class="deal c-deal"></colgroup>
+            <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th class="deal">Deal</th></tr></thead>
+            <tbody>
+              <tr><td>John Smith</td><td><span class="s">john@acmecorp.com</span></td><td><span class="s">(555) 012-3456</span></td><td class="deal">$125,000</td></tr>
+              <tr><td>Sarah Johnson</td><td><span class="s">sarah.j@techstart.io</span></td><td><span class="s">(555) 789-0123</span></td><td class="deal">$89,500</td></tr>
+              <tr><td>Mike Chen</td><td><span class="s">m.chen@globalfin.com</span></td><td><span class="s">(555) 456-7890</span></td><td class="deal">$234,000</td></tr>
+              <tr><td>Emily Davis</td><td><span class="s">emily.d@retailco.net</span></td><td><span class="s">+44 20 7946 0958</span></td><td class="deal">$67,800</td></tr>
+            </tbody>
+          </table>
+          <div class="crm-cards">
+            <div class="crm-card"><b>Billing</b><div>Card on file: <span class="s">4111 1111 1111 1111</span></div><div>IBAN: <span class="s">DE89 3704 0044 0532 0130 00</span></div></div>
+            <div class="crm-card"><b>Integrations</b><div>Stripe key: <code class="s">sk_live_51Hx<span></span>9Q2aBcDeF0123456</code></div><div>Webhook: <code>…/hook?token=<span class="s">9f8e<span></span>7d6c5b4a3210</span></code></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="stage-controls">
+        <button class="switch" type="button" role="switch" aria-checked="false" data-demo-switch><span class="track" aria-hidden="true"></span>ScreenShield</button>
+        <p class="fine">A live demo with made-up data. Turn it off to see what your call would see without it.</p>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="finds" aria-labelledby="finds-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="finds-title">Finds 16 kinds of sensitive info</h2>
+      <p class="lede">Every check runs on your computer while the page loads. The free scan finds emails and phone numbers. Pro finds everything below and hides it on every site without you clicking anything.</p>
+    </div>
+    <div class="table-tools">
+      <button class="btn quiet small" type="button" aria-pressed="false" data-specimen-toggle data-show="Show the examples" data-hide="Hide the examples">Show the examples</button>
+      <span class="fine">Made-up values, hidden the way ScreenShield hides them.</span>
+    </div>
+    <table class="specimen is-hidden" data-specimen>
+      <thead><tr><th scope="col">Type</th><th scope="col">Looks like</th><th scope="col" class="plan">Plan</th></tr></thead>
+      <tbody>
+        <tr><td>Email</td><td class="ex"><span>dana.whitfield@northwind.io</span></td><td class="plan free">Free and Pro</td></tr>
+        <tr><td>Phone number</td><td class="ex"><span>+1 (555) 012-3456</span></td><td class="plan free">Free and Pro</td></tr>
+        <tr><td>Card number</td><td class="ex"><span>4111 1111 1111 1111</span></td><td class="plan">Pro</td></tr>
+        <tr><td>IBAN</td><td class="ex"><span>DE89 3704 0044 0532 0130 00</span></td><td class="plan">Pro</td></tr>
+        <tr><td>US Social Security number</td><td class="ex"><span>078-05-1120</span></td><td class="plan">Pro</td></tr>
+        <tr><td>IP address</td><td class="ex"><span>203.0.113.42</span></td><td class="plan">Pro</td></tr>
+        <tr><td>IPv6 address</td><td class="ex"><span>2001:db8::8a2e:370:7334</span></td><td class="plan">Pro</td></tr>
+        <tr><td>API key</td><td class="ex"><span>sk_live_51Hx<wbr>9Q2aBcDeF0123456</span></td><td class="plan">Pro</td></tr>
+        <tr><td>Access token</td><td class="ex"><span>Bearer 8f2ca1e9<wbr>b7d34f60c2a1</span></td><td class="plan">Pro</td></tr>
+        <tr><td>Token (JWT)</td><td class="ex"><span>eyJhbGciOiJIUzI1NiJ9.<wbr>eyJzdWIiOiIxMjM0In0.<wbr>Qm9ndXM</span></td><td class="plan">Pro</td></tr>
+        <tr><td>Private key</td><td class="ex"><span>-----BEGIN PRIVATE KEY-----</span></td><td class="plan">Pro</td></tr>
+        <tr><td>Database URL</td><td class="ex"><span>postgres://admin:<wbr>hunter2@db.internal/prod</span></td><td class="plan">Pro</td></tr>
+        <tr><td>Secret in a link</td><td class="ex"><span>…/reset?token=<wbr>9f8e7d6c5b4a</span></td><td class="plan">Pro</td></tr>
+        <tr><td>Other secrets</td><td class="ex"><span>password: Tr0ub4dor&amp;3</span></td><td class="plan">Pro</td></tr>
+        <tr><td>Crypto wallet</td><td class="ex"><span>bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4</span></td><td class="plan">Pro</td></tr>
+        <tr><td>Money amount, if you turn it on</td><td class="ex"><span>$12,400.00</span></td><td class="plan">Pro</td></tr>
+        <tr><td>Your own keywords</td><td class="ex"><span>Project Falcon</span></td><td class="plan">Pro</td></tr>
+      </tbody>
+    </table>
+    <p class="fine" style="margin-top:18px">Card numbers are checked with the Luhn algorithm and IBANs with their checksum, so order numbers and dates aren't hidden by mistake.</p>
+  </div>
+</section>
+
+<section class="section" id="presentation" aria-labelledby="pres-title">
+  <div class="wrap split">
+    <div>
+      <div class="section-head">
+        <h2 id="pres-title">Turns on by itself when you share</h2>
+        <p class="lede">Presentation Mode protects every open tab for as long as you're sharing, so a quick switch to your inbox doesn't give anything away.</p>
+      </div>
+      <ol class="steps">
+        <li><div><h3>Start sharing in your browser</h3><p>Present a tab, a window or your whole screen in Google Meet, Zoom or Microsoft Teams on the web, or another meeting app that runs in Chrome.</p></div></li>
+        <li><div><h3>ScreenShield notices right away</h3><p>Presentation Mode turns on and the toolbar icon shows ON. Sharing from a desktop meeting app? Press <kbd>Alt+Shift+M</kbd>.</p></div></li>
+        <li><div><h3>Every tab is protected</h3><p>Sensitive info is hidden in all your tabs, not only the one you're showing, and the titles of your other tabs are masked. When you stop sharing, everything goes back to normal.</p></div></li>
+      </ol>
+      <p class="fine" style="margin-top:28px">Presentation Mode is part of Pro. Try it free for 7 days.</p>
+    </div>
+    <img class="popup-shot" src="/screenshield-site/assets/img/popup-presenting-dark.png" width="368" height="712" alt="The ScreenShield popup with Presentation Mode turned on" loading="lazy">
+  </div>
+</section>
+
+<section class="section" id="tools" aria-labelledby="tools-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="tools-title">Blur anything by hand, free and unlimited</h2>
+      <p class="lede">Your blurs are saved for each site and come back when you return, so you set up a page once.</p>
+    </div>
+    <img class="wide-shot" src="/screenshield-site/assets/img/demo-tools.png" width="1180" height="600" alt="A CRM page with a blurred revenue figure, a blurred area and a whole email column about to be blurred, with the ScreenShield toolbar at the bottom" loading="lazy">
+    <div class="tools">
+      <div><h3>Click to blur</h3><p>Click any text, image, table cell or button. Click it again to unblur.</p></div>
+      <div><h3>Draw area</h3><p>Drag a rectangle over a chart, a sidebar or anything inside a canvas.</p></div>
+      <div><h3>Blur similar</h3><p>Click one email in a list and the whole column is blurred at once.</p></div>
+    </div>
+    <p class="fine" style="margin-top:28px">Also free: blur strength, hidden tab titles, a page scan for emails and phone numbers, undo, and a panic key, <kbd>Alt+Shift+H</kbd>, that hides the whole screen at once.</p>
+  </div>
+</section>
+
+<section class="section" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="pricing-title">Free to start. Pro when you share every day.</h2>
+    </div>
+    <div class="plans">
+      <div class="plan-box">
+        <h3>Free</h3>
+        <div class="price">$0</div>
+        <ul>
+          <li>Click to blur, draw areas and blur similar items, with no limits</li>
+          <li>Saved blurs for every site</li>
+          <li>Blur strength and hidden tab titles</li>
+          <li>Page scan for emails and phone numbers</li>
+          <li>Panic key, undo and redo, keyboard shortcuts</li>
+        </ul>
+        <a class="btn quiet" data-store="pricing-free" href="https://chromewebstore.google.com/detail/lnnmacapfomfnfnmejcofohhimoebafk">Add to Chrome</a>
+      </div>
+      <div class="plan-box pro">
+        <h3>Pro</h3>
+        <div class="price-list">
+          <div><b>$4.99</b><span>per month</span></div>
+          <div><b>$29.99</b><span>per year, save 50%</span></div>
+          <div><b>$49</b><span>once, for life</span></div>
+        </div>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Automatic detection of 16 kinds of sensitive info on every site</li>
+          <li>Presentation Mode that turns on when you share</li>
+          <li>Your own keywords and regular expressions</li>
+          <li>Black bars, site-wide rules and protected screenshots</li>
+          <li>Backup to a file and import on another computer</li>
+        </ul>
+        <p class="launch">Launch offer: lifetime Pro for <b>$29</b> until November 30, 2026.</p>
+        <a class="btn" data-store="pricing-pro" href="https://chromewebstore.google.com/detail/lnnmacapfomfnfnmejcofohhimoebafk">Install and try Pro free for 7 days</a>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:20px">Prices in US dollars. Payments are handled by ExtensionPay and Stripe. Cancel a monthly or yearly plan at any time from the ScreenShield popup. See the <a href="/screenshield-site/refund/">refund policy</a>.</p>
+  </div>
+</section>
+
+<section class="section band" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="privacy-title">A privacy tool shouldn't see your data</h2>
+      <p class="lede">ScreenShield doesn't. <a href="/screenshield-site/privacy/">Read the privacy policy</a>.</p>
+    </div>
+    <div class="facts">
+      <div><h3>Runs on your computer</h3><p>All detection and blurring happen inside your browser. Page content is never uploaded anywhere.</p></div>
+      <div><h3>No tracking</h3><p>No analytics and no ads. The free plan doesn't need an account.</p></div>
+      <div><h3>Doesn't break websites</h3><p>ScreenShield hides text without rewriting the page, so web apps like Gmail and Slack keep working.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="section-head"><h2 id="faq-title">Questions</h2></div>
+    <div class="faq">
+      <details><summary>Will the blur show up in my screen share and recordings?</summary><p>Yes. The blur is applied to the page itself, so Meet, Zoom, Teams, Loom, OBS and any other app that captures your screen only see the blurred version.</p></details>
+      <details><summary>Does it work with the Zoom and Teams desktop apps?</summary><p>ScreenShield protects what's shown in Chrome. If you share a Chrome window or your whole screen from a desktop app, the web pages in it are protected. Automatic start only notices sharing that begins in the browser, so press <kbd>Alt+Shift+M</kbd> to turn on Presentation Mode yourself.</p></details>
+      <details><summary>Can ScreenShield see or upload what's on my pages?</summary><p>No. Pages are checked on your computer and nothing is sent anywhere. The only connection ScreenShield makes is to ExtensionPay, to check whether you have Pro.</p></details>
+      <details><summary>Where doesn't it work?</summary><p>Chrome doesn't let extensions run on chrome:// pages, the Chrome Web Store or other extensions' pages. Text drawn on a canvas, as in Google Docs, and text inside images can't be read, so cover those with Draw area.</p></details>
+      <details><summary>Is it safe enough for passwords and full card numbers?</summary><p>It lowers the risk a lot, but no tool catches everything. Look over your screen before you share something highly sensitive.</p></details>
+      <details><summary>What happens when the free trial ends?</summary><p>ScreenShield goes back to the free plan. You keep every blur you saved, and nothing is charged unless you choose a plan.</p></details>
+      <details><summary>How do I cancel?</summary><p>Open the ScreenShield popup and choose Manage subscription. You keep Pro until the end of the period you paid for.</p></details>
+      <details><summary>Does it work in Edge or Brave?</summary><p>Yes. Any browser that installs extensions from the Chrome Web Store can run ScreenShield.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section closer">
+  <div class="wrap">
+    <h2>Ready for your next call?</h2>
+    <a class="btn" data-store="footer" href="https://chromewebstore.google.com/detail/lnnmacapfomfnfnmejcofohhimoebafk">Add to Chrome, it's free</a>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="logo" href="/screenshield-site/"><img src="/screenshield-site/assets/img/logo.svg" alt="" width="24" height="24">ScreenShield</a>
+    <nav aria-label="Footer">
+      <a href="/screenshield-site/help/">Help</a>
+      <a href="/screenshield-site/support/">Support</a>
+      <a href="/screenshield-site/privacy/">Privacy</a>
+      <a href="/screenshield-site/terms/">Terms</a>
+      <a href="/screenshield-site/refund/">Refunds</a>
+      <a href="/screenshield-site/changelog/">What's new</a>
+    </nav>
+    <span class="copy">© 2026 ScreenShield</span>
+  </div>
+</footer>
+<script src="/screenshield-site/assets/site.js" defer></script>
+</body>
+</html>

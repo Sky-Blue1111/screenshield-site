@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to hide API keys and tokens during demos and livestreams | ScreenShield</title>
+<meta name="description" content="Stop leaking API keys, tokens, private keys and database URLs on stream or in a live demo. ScreenShield hides them in the browser as pages load.">
+<link rel="canonical" href="https://sky-blue1111.github.io/screenshield-site/help/hide-api-keys/">
+<link rel="icon" href="/screenshield-site/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/screenshield-site/assets/img/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/screenshield-site/assets/img/icon-180.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ScreenShield">
+<meta property="og:title" content="How to hide API keys and tokens during demos and livestreams | ScreenShield">
+<meta property="og:description" content="Stop leaking API keys, tokens, private keys and database URLs on stream or in a live demo. ScreenShield hides them in the browser as pages load.">
+<meta property="og:url" content="https://sky-blue1111.github.io/screenshield-site/help/hide-api-keys/">
+<meta property="og:image" content="https://sky-blue1111.github.io/screenshield-site/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#16151f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6fb" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="/screenshield-site/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="/screenshield-site/"><img src="/screenshield-site/assets/img/logo.svg" alt="" width="30" height="30">ScreenShield</a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="hide-sm" href="/screenshield-site/#finds">What it finds</a>
+      <a class="hide-sm" href="/screenshield-site/#pricing">Pricing</a>
+      <a class="hide-xs" href="/screenshield-site/help/">Help</a>
+      <a class="btn small" data-store="help/hide-api-keys" href="https://chromewebstore.google.com/detail/lnnmacapfomfnfnmejcofohhimoebafk">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<article class="doc">
+<h1>Hide API keys and tokens during demos and livestreams</h1>
+<p class="updated">Updated October 21, 2026</p>
+<p class="lede">A key shown for two seconds on a stream or in a recorded demo has to be treated as leaked. Rotating it is the right response, but not showing it in the first place is better. ScreenShield recognises keys and tokens in the browser and hides them while the page loads.</p>
+
+<h2>What ScreenShield recognises</h2>
+<ul>
+  <li>API keys from popular services, such as Stripe, OpenAI, Google, GitHub, Slack and AWS</li>
+  <li>Access tokens, including Bearer tokens in docs and consoles</li>
+  <li>JWTs</li>
+  <li>Private keys, such as the start of a PEM block</li>
+  <li>Database connection URLs that contain a password</li>
+  <li>Secrets inside links, such as <code>?token=</code> or <code>&amp;key=</code> values</li>
+  <li>Other secrets next to labels like "password" or "secret"</li>
+  <li>Your own patterns, as keywords or regular expressions</li>
+</ul>
+<p>Detection runs on your computer. The keys are never uploaded anywhere.</p>
+
+<h2>Set it up once</h2>
+<ol>
+  <li>Install ScreenShield and start the free Pro trial from the popup.</li>
+  <li>Open ScreenShield's settings. Under Automatic detection, keys, tokens, private keys, database URLs and secrets in links are hidden on every site by default.</li>
+  <li>Add your own patterns under Your keywords, for example an internal key prefix. Use the test box to check a regular expression before you save it.</li>
+</ol>
+
+<h2>While you present or stream</h2>
+<ul>
+  <li><strong>Presentation Mode</strong> turns on by itself when you share in a meeting app that runs in Chrome, and hides everything it knows about in every tab. For OBS, desktop apps and streaming tools, press <kbd>Alt+Shift+M</kbd> before you go live.</li>
+  <li><strong>Panic key:</strong> <kbd>Alt+Shift+H</kbd> hides the whole screen instantly if something unexpected comes up.</li>
+  <li><strong>Terminals and editors</strong> outside Chrome aren't covered. Keep secrets in environment variables there, and don't open .env files on stream.</li>
+</ul>
+
+<h2>Without Pro</h2>
+<p>On the free plan, blur key fields by hand before you share: choose Click to blur and click the key, or Blur similar for a list of keys. Your blurs are saved for each site, so a console you demo often stays covered.</p>
+
+<h2>If a key was shown anyway</h2>
+<p>Rotate it. Revoke the old key in the provider's dashboard and create a new one. Assume anything that appeared in a recording or stream has been seen.</p>
+
+<p><a class="btn" data-store="help-api-keys" href="https://chromewebstore.google.com/detail/lnnmacapfomfnfnmejcofohhimoebafk">Add ScreenShield to Chrome, it's free</a></p>
+</article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="logo" href="/screenshield-site/"><img src="/screenshield-site/assets/img/logo.svg" alt="" width="24" height="24">ScreenShield</a>
+    <nav aria-label="Footer">
+      <a href="/screenshield-site/help/">Help</a>
+      <a href="/screenshield-site/support/">Support</a>
+      <a href="/screenshield-site/privacy/">Privacy</a>
+      <a href="/screenshield-site/terms/">Terms</a>
+      <a href="/screenshield-site/refund/">Refunds</a>
+      <a href="/screenshield-site/changelog/">What's new</a>
+    </nav>
+    <span class="copy">© 2026 ScreenShield</span>
+  </div>
+</footer>
+<script src="/screenshield-site/assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sky-blue1111.github.io/screenshield-site/sitemap.xml

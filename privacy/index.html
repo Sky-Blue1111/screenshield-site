@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy | ScreenShield</title>
+<meta name="description" content="How the ScreenShield Chrome extension and website handle your data. Page content is checked on your computer and never leaves your browser.">
+<link rel="canonical" href="https://sky-blue1111.github.io/screenshield-site/privacy/">
+<link rel="icon" href="/screenshield-site/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/screenshield-site/assets/img/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/screenshield-site/assets/img/icon-180.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ScreenShield">
+<meta property="og:title" content="Privacy policy | ScreenShield">
+<meta property="og:description" content="How the ScreenShield Chrome extension and website handle your data. Page content is checked on your computer and never leaves your browser.">
+<meta property="og:url" content="https://sky-blue1111.github.io/screenshield-site/privacy/">
+<meta property="og:image" content="https://sky-blue1111.github.io/screenshield-site/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#16151f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6fb" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="/screenshield-site/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="/screenshield-site/"><img src="/screenshield-site/assets/img/logo.svg" alt="" width="30" height="30">ScreenShield</a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="hide-sm" href="/screenshield-site/#finds">What it finds</a>
+      <a class="hide-sm" href="/screenshield-site/#pricing">Pricing</a>
+      <a class="hide-xs" href="/screenshield-site/help/">Help</a>
+      <a class="btn small" data-store="privacy" href="https://chromewebstore.google.com/detail/lnnmacapfomfnfnmejcofohhimoebafk">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<article class="doc">
+<h1>Privacy policy</h1>
+<p class="updated">Last updated: October 21, 2026. Applies to ScreenShield 3.0 and later, and to this website.</p>
+<p class="lede">ScreenShield is a privacy tool, so it is built to know as little about you as possible. Here is exactly what it does with your data.</p>
+
+<h2>The short version</h2>
+<ul>
+  <li>ScreenShield checks pages on your computer. Page content is never sent anywhere.</li>
+  <li>Your settings and saved blurs are stored by Chrome on your computer.</li>
+  <li>There are no analytics, ads or trackers, in the extension or on this website.</li>
+  <li>The only server the extension talks to is ExtensionPay, our payment provider, to check whether you have Pro.</li>
+  <li>We don't sell, rent or share your data with anyone.</li>
+</ul>
+
+<h2>What happens on the pages you visit</h2>
+<p>ScreenShield runs on the pages you open so it can re-apply the blurs you saved and, if you use automatic detection, hide sensitive information while the page loads. To do that, it reads the text of the page and of form fields inside your browser.</p>
+<p>The kinds of information it looks for are emails, phone numbers, card numbers, IBANs, US Social Security numbers, IP addresses, API keys, access tokens, JWTs, private keys, database connection URLs, secrets inside links, crypto wallet addresses, money amounts and the keywords you add yourself. Whatever it finds is used only in memory to hide it on screen. It is not stored, logged or transmitted.</p>
+<p>Two things are saved, and neither contains the text itself:</p>
+<ul>
+  <li>When you blur something by hand, ScreenShield saves how to find it again: CSS selectors, its rough size and a short numeric hash of its text.</li>
+  <li>When you choose to never hide a value, ScreenShield saves a salted hash of that value so it can recognise it later.</li>
+</ul>
+
+<h2>What is stored on your computer</h2>
+<p>ScreenShield uses Chrome's extension storage on your computer. This data stays there unless you export a backup file yourself.</p>
+<table>
+  <thead><tr><th>Data</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td>Settings: blur strength and style, detection choices, your keywords, Presentation Mode and appearance options</td><td>So ScreenShield works the way you set it up</td></tr>
+    <tr><td>Saved blurs for each site: the site's address, and the page path when you choose to remember a page</td><td>So your blurs come back when you return</td></tr>
+    <tr><td>Your plan status: whether you have Pro, which plan, and when it was last checked</td><td>So Pro keeps working when you're offline</td></tr>
+    <tr><td>Install details: install date, version, whether you've seen the welcome page, and how often we've asked for a rating</td><td>To show the welcome and what's-new pages once, and to not ask for ratings too often</td></tr>
+    <tr><td>While Chrome is open: whether Presentation Mode or the panic screen is on, and plan prices</td><td>Cleared when you close Chrome</td></tr>
+  </tbody>
+</table>
+<p>Protected screenshots are held briefly in the extension's memory so the screenshot page can show them. ScreenShield never saves them to disk; that only happens if you download one.</p>
+
+<h2>Payments and Pro</h2>
+<p>ScreenShield sells Pro through <a href="https://extensionpay.com" rel="noopener">ExtensionPay</a>, and card payments are processed by <a href="https://stripe.com" rel="noopener">Stripe</a>. When you start a trial or buy a plan, you do it on their pages. ScreenShield never sees your card details.</p>
+<ul>
+  <li>To check your plan, the extension contacts extensionpay.com about every 12 hours, and when you open ScreenShield if it hasn't checked in the last 10 minutes. It uses a random identifier ExtensionPay creates for your installation.</li>
+  <li>If you have a plan, ExtensionPay tells the extension the email address it's linked to, so ScreenShield can show which account you're using. The extension keeps it only in memory.</li>
+  <li>The ExtensionPay library keeps that identifier in Chrome's sync storage, so if you use Chrome sync, your plan follows you to your other computers.</li>
+  <li>ExtensionPay stores the email address you use to start a trial or pay, along with your plan and payment status. We can see this in our ExtensionPay and Stripe accounts and use it only to provide Pro, answer support requests and handle refunds.</li>
+</ul>
+<p>ExtensionPay describes its own data handling in the privacy answers of the <a href="https://extensionpay.com/" rel="noopener">ExtensionPay FAQ</a>. Stripe's is in the <a href="https://stripe.com/privacy" rel="noopener">Stripe privacy policy</a>.</p>
+
+<h2>When you uninstall</h2>
+<p>Chrome opens a short page on this website asking why you removed ScreenShield. Its address includes the ScreenShield version number and nothing else. Answering is optional.</p>
+
+<h2>This website</h2>
+<p>This is a static website. It sets no cookies and loads no analytics or third-party scripts; even the fonts are served from this site. Like any web host, our hosting provider processes visitors' IP addresses to deliver the pages and protect the site from abuse, and doesn't share them with us for tracking.</p>
+<p>If you contact us through the support form or the Chrome Web Store support tab, we receive what you write and the email address you give, and use them only to reply to you.</p>
+
+<h2>Permissions ScreenShield asks for</h2>
+<table>
+  <thead><tr><th>Permission</th><th>What it's used for</th></tr></thead>
+  <tbody>
+    <tr><td>Read and change data on the websites you visit</td><td>Re-applying your saved blurs and hiding sensitive information while pages load. All of it happens on your computer.</td></tr>
+    <tr><td>Storage</td><td>Saving your settings, saved blurs and plan status on your computer.</td></tr>
+    <tr><td>Active tab and scripting</td><td>Protecting the current tab when you click the toolbar button, use a shortcut or the right-click menu, including tabs that were open before you installed ScreenShield, and taking a protected screenshot when you ask for one.</td></tr>
+    <tr><td>Context menus</td><td>The ScreenShield items in the right-click menu.</td></tr>
+    <tr><td>Alarms</td><td>Checking your plan status about every 12 hours.</td></tr>
+    <tr><td>Access to extensionpay.com</td><td>Checking and processing Pro purchases.</td></tr>
+  </tbody>
+</table>
+<p>On web meeting sites such as Google Meet, Zoom and Microsoft Teams, a small script notices when you start or stop sharing your screen, so Presentation Mode can turn on and off by itself. It doesn't read or send any meeting content.</p>
+
+<h2>What we never do</h2>
+<ul>
+  <li>Sell or rent your data, or share it with advertisers or data brokers.</li>
+  <li>Use your data for anything other than ScreenShield's features.</li>
+  <li>Use your data to decide creditworthiness or for lending.</li>
+  <li>Track the sites you visit. We never receive your browsing history.</li>
+</ul>
+<p>The use of information received by ScreenShield adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies" rel="noopener">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>Your choices</h2>
+<ul>
+  <li><strong>Delete your data on this computer:</strong> open ScreenShield's settings and choose Reset settings and saved blurs, or remove the extension. Chrome deletes the extension's storage when you remove it.</li>
+  <li><strong>Take your data with you:</strong> Pro users can export settings and saved blurs to a file from the settings page.</li>
+  <li><strong>Payment records:</strong> to see, correct or delete the email address and plan details ExtensionPay holds for you, <a href="/screenshield-site/support/">contact us</a>. Some payment records must be kept for tax and accounting reasons.</li>
+</ul>
+
+<h2>Children</h2>
+<p>ScreenShield isn't directed at children under 13, and we don't knowingly collect personal information from them.</p>
+
+<h2>Changes to this policy</h2>
+<p>If we change how ScreenShield handles data, we'll update this page and the date at the top before the change takes effect, and mention it on the <a href="/screenshield-site/changelog/">What's new</a> page.</p>
+
+<h2>Contact</h2>
+<p>Questions about privacy? <a href="/screenshield-site/support/">Contact us</a>.</p>
+</article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="logo" href="/screenshield-site/"><img src="/screenshield-site/assets/img/logo.svg" alt="" width="24" height="24">ScreenShield</a>
+    <nav aria-label="Footer">
+      <a href="/screenshield-site/help/">Help</a>
+      <a href="/screenshield-site/support/">Support</a>
+      <a href="/screenshield-site/privacy/">Privacy</a>
+      <a href="/screenshield-site/terms/">Terms</a>
+      <a href="/screenshield-site/refund/">Refunds</a>
+      <a href="/screenshield-site/changelog/">What's new</a>
+    </nav>
+    <span class="copy">© 2026 ScreenShield</span>
+  </div>
+</footer>
+<script src="/screenshield-site/assets/site.js" defer></script>
+</body>
+</html>
