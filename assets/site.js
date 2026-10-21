@@ -4,8 +4,8 @@ const STORE = 'https://chromewebstore.google.com/detail/lnnmacapfomfnfnmejcofohh
 const SUPPORT_TAB = `${STORE}/support`;
 // Google Form for feedback and support requests, and its pre-filled "I removed ScreenShield"
 // link for the uninstall page. Until they exist, links fall back to the store's Support tab.
-const FEEDBACK_FORM = '';
-const FEEDBACK_FORM_REMOVED = '';
+const FEEDBACK_FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfTGWr9dR08NcUZBFjcg90DJsccIaPXDYEy-J5T1LtSui0Bfw/viewform';
+const FEEDBACK_FORM_REMOVED = `${FEEDBACK_FORM}?usp=pp_url&entry.2146856350=I+removed+ScreenShield`;
 
 // <a data-store="hero"> → store URL tagged with where on the site it was clicked.
 for (const a of document.querySelectorAll('a[data-store]')) {
