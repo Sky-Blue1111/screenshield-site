@@ -74,7 +74,7 @@
 <h2>Payments and Pro</h2>
 <p>ScreenShield sells Pro through <a href="https://extensionpay.com" rel="noopener">ExtensionPay</a>, and card payments are processed by <a href="https://stripe.com" rel="noopener">Stripe</a>. When you start a trial or buy a plan, you do it on their pages. ScreenShield never sees your card details.</p>
 <ul>
-  <li>To check your plan, the extension contacts extensionpay.com about every 12 hours, and when you open ScreenShield if it hasn't checked in the last 10 minutes. It uses a random identifier ExtensionPay creates for your installation.</li>
+  <li>To check your plan, the extension contacts extensionpay.com about every 12 hours, and when you open ScreenShield if it hasn't checked in the last 10 minutes. For an hour after you open a payment, trial or log-in page, it checks more often, until Pro shows up. It uses a random identifier ExtensionPay creates for your installation.</li>
   <li>If you have a plan, ExtensionPay tells the extension the email address it's linked to, so ScreenShield can show which account you're using. The extension keeps it only in memory.</li>
   <li>The ExtensionPay library keeps that identifier in Chrome's sync storage, so if you use Chrome sync, your plan follows you to your other computers.</li>
   <li>ExtensionPay stores the email address you use to start a trial or pay, along with your plan and payment status. We can see this in our ExtensionPay and Stripe accounts and use it only to provide Pro, answer support requests and handle refunds.</li>
