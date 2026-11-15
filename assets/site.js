@@ -7,11 +7,30 @@ const SUPPORT_TAB = `${STORE}/support`;
 const FEEDBACK_FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfTGWr9dR08NcUZBFjcg90DJsccIaPXDYEy-J5T1LtSui0Bfw/viewform';
 const FEEDBACK_FORM_REMOVED = `${FEEDBACK_FORM}?usp=pp_url&entry.2146856350=I+removed+ScreenShield`;
 
-// <a data-store="hero"> → store URL tagged with where on the site it was clicked.
+// Where the visitor came from, when the link that brought them here was tagged
+// (?utm_source=reddit&utm_medium=sideproject). Kept for the visit so the store
+// sees it even after a click through to a help page. Storage can be blocked.
+const TAG = /^[\w.-]{1,40}$/;
+function arrival() {
+  const q = new URLSearchParams(location.search);
+  const now = { source: q.get('utm_source') || '', medium: q.get('utm_medium') || '' };
+  try {
+    if (TAG.test(now.source)) sessionStorage.setItem('ss-arrival', JSON.stringify(now));
+    const saved = JSON.parse(sessionStorage.getItem('ss-arrival') || 'null');
+    if (saved && TAG.test(saved.source)) return saved;
+  } catch {
+    /* no storage: use this page's tags only */
+  }
+  return TAG.test(now.source) ? now : null;
+}
+const from = arrival();
+
+// <a data-store="hero"> → store URL tagged with where on the site it was clicked,
+// or with the source that brought the visitor to the site.
 for (const a of document.querySelectorAll('a[data-store]')) {
   const url = new URL(STORE);
-  url.searchParams.set('utm_source', 'screenshield.app');
-  url.searchParams.set('utm_medium', a.dataset.store || 'link');
+  url.searchParams.set('utm_source', from ? from.source : 'screenshield.app');
+  url.searchParams.set('utm_medium', from && TAG.test(from.medium) ? from.medium : a.dataset.store || 'link');
   url.searchParams.set('utm_campaign', 'site');
   a.href = url.href;
 }
