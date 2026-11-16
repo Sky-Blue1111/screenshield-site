@@ -32,6 +32,8 @@ for (const a of document.querySelectorAll('a[data-store]')) {
   url.searchParams.set('utm_source', from ? from.source : 'screenshield.app');
   url.searchParams.set('utm_medium', from && TAG.test(from.medium) ? from.medium : a.dataset.store || 'link');
   url.searchParams.set('utm_campaign', 'site');
+  // Language pages open the store in their own language.
+  if (a.dataset.hl && /^[a-zA-Z-]{2,10}$/.test(a.dataset.hl)) url.searchParams.set('hl', a.dataset.hl);
   a.href = url.href;
 }
 for (const a of document.querySelectorAll('a[data-feedback]')) {

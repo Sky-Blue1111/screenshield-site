@@ -291,3 +291,10 @@ kbd { font: inherit; font-size: 0.86em; font-weight: 600; padding: 2px 7px; bord
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* Language pages (scripts/build-locale-pages.mjs) */
+.doc h2.caps { font-size: 14px; letter-spacing: 0.08em; color: var(--muted); margin: 44px 0 12px; }
+.locale-page .cta { margin: 26px 0 14px; }
+.locale-page .wide-shot { display: block; width: 100%; height: auto; margin: 30px 0 6px; }
+.site-foot .langs { display: flex; flex-wrap: wrap; gap: 8px 16px; width: 100%; font-size: 14px; }
+.site-foot .langs span { color: var(--text); font-weight: 600; }
